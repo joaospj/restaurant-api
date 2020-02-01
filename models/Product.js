@@ -1,8 +1,8 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../database/database");
 
-const Category = sequelize.define(
-  "Category",
+const Product = sequelize.define(
+  "Product",
   {
     id: {
       type: DataTypes.INTEGER,
@@ -14,10 +14,23 @@ const Category = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false
     },
-    idParent: {
-      type: DataTypes.INTEGER
+    description: {
+      type: DataTypes.STRING
     },
-    iconUrl: {
+    unitMeasure: {
+      type: DataTypes.STRING
+    },
+    inStock: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false
+    },
+    img1Url: {
+      type: DataTypes.STRING
+    },
+    img2Url: {
+      type: DataTypes.STRING
+    },
+    img3Url: {
       type: DataTypes.STRING
     }
   },
@@ -26,4 +39,4 @@ const Category = sequelize.define(
   }
 );
 
-module.exports = Category;
+module.exports = Product;
