@@ -1,9 +1,10 @@
 const Category = require("../models/Category");
+const Point = require("../models/Point");
 
 //Get all Categories
 
 exports.getAllCategories = function(req, res) {
-  Category.findAll()
+  Category.findAll({ include: [Point] })
     .then(resp => {
       res.send(resp);
     })
@@ -16,7 +17,7 @@ exports.getAllCategories = function(req, res) {
 //Get Category by id
 
 exports.getCategory = function(req, res) {
-  Category.findByPk(req.params.id)
+  Category.findByPk(req.params.id, { include: [Point] })
     .then(resp => {
       res.send(resp);
     })
@@ -31,7 +32,9 @@ exports.getCategory = function(req, res) {
 exports.addCategory = function(req, res) {
   Category.create({
     name: req.body.name,
-    PointId: req.body.PointId
+    PointId: req.body.PointId,
+    idParent: req.body.idParent,
+    iconUrl: req.body.iconUrl
   })
     .then(resp => {
       res.send(resp);
