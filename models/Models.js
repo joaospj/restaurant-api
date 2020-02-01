@@ -6,20 +6,28 @@ const Table = require("./Table");
 const Tab = require("./Tab");
 const Order = require("./Order");
 
-Point.hasMany(Category);
-Category.belongsTo(Point);
+Point.hasMany(Category, { foreignKey: { allowNull: false } });
+Category.belongsTo(Point, { foreignKey: { allowNull: false } });
 
-Category.hasMany(Product);
-Product.belongsTo(Category);
+Category.hasMany(Product, { foreignKey: { allowNull: false } });
+Product.belongsTo(Category, { foreignKey: { allowNull: false } });
 
-Product.hasMany(Size);
-Size.belongsTo(Product);
+Product.hasMany(Size, { foreignKey: { allowNull: false } });
+Size.belongsTo(Product, { foreignKey: { allowNull: false } });
 
-Table.hasMany(Tab);
-Tab.belongsTo(Table);
+Table.hasMany(Tab, { foreignKey: { allowNull: false } });
+Tab.belongsTo(Table, { foreignKey: { allowNull: false } });
 
-Tab.belongsToMany(Size, { through: Order });
-Size.belongsToMany(Tab, { through: Order });
+Tab.belongsToMany(
+  Size,
+  { through: Order },
+  { foreignKey: { allowNull: false } }
+);
+Size.belongsToMany(
+  Tab,
+  { through: Order },
+  { foreignKey: { allowNull: false } }
+);
 
 function syncModel() {
   Point.sync({ force: true });

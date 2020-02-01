@@ -50,7 +50,7 @@ exports.deletePoint = function(req, res) {
     }
   })
     .then(resp => {
-      res.send({ msg: "Point deleted successfully" });
+      res.sendStatus(200);
       //   console.log(resp);
     })
     .catch(err => {

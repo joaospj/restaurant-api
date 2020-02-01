@@ -2,7 +2,7 @@ const express = require("express");
 const db = require("./database/database.js");
 
 const Models = require("./models/Models");
-const pointRouter = require("./routes/pointRouter");
+const allRoutes = require("./routes/allRoutes");
 
 const app = express();
 const port = 3000;
@@ -10,7 +10,7 @@ const port = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/api", pointRouter);
+app.use("/api", allRoutes);
 
 app.get("/", (req, res) => res.send("Hello World!"));
 
