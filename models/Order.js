@@ -1,4 +1,4 @@
-const { DataTypes } = require("sequelize");
+const { Sequelize, DataTypes } = require("sequelize");
 const sequelize = require("../database/database");
 
 const Order = sequelize.define(
@@ -21,7 +21,7 @@ const Order = sequelize.define(
     },
     open: {
       type: DataTypes.DATE,
-      allowNull: false
+      defaultValue: Sequelize.NOW
     },
     closed: {
       type: DataTypes.DATE

@@ -32,6 +32,4 @@ const Tab = sequelize.define(
   }
 );
 
-//Tab.sync({ force: true });
-
 module.exports = Tab;
