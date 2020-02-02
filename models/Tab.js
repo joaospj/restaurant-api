@@ -1,4 +1,4 @@
-const { DataTypes } = require("sequelize");
+const { Sequelize, DataTypes } = require("sequelize");
 const sequelize = require("../database/database");
 
 const Tab = sequelize.define(
@@ -12,7 +12,7 @@ const Tab = sequelize.define(
     },
     open: {
       type: DataTypes.DATE,
-      allowNull: false
+      defaultValue: Sequelize.NOW
     },
     closed: {
       type: DataTypes.DATE
@@ -31,5 +31,7 @@ const Tab = sequelize.define(
     paranoid: true
   }
 );
+
+//Tab.sync({ force: true });
 
 module.exports = Tab;

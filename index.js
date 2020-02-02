@@ -1,7 +1,7 @@
 const express = require("express");
 const db = require("./database/database.js");
 
-//const Models = require("./models/Models"); //Usar para atualizar o BD
+const Models = require("./models/Models");
 const allRoutes = require("./routes/allRoutes");
 
 const app = express();
