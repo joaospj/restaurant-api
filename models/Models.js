@@ -18,26 +18,18 @@ Size.belongsTo(Product, { foreignKey: { allowNull: false } });
 Table.hasMany(Tab, { foreignKey: { allowNull: false } });
 Tab.belongsTo(Table, { foreignKey: { allowNull: false } });
 
-Tab.belongsToMany(
-  Size,
-  { through: Order },
-  { foreignKey: { allowNull: false } }
-);
-Size.belongsToMany(
-  Tab,
-  { through: Order },
-  { foreignKey: { allowNull: false } }
-);
+Tab.hasMany(Order, { foreignKey: { allowNull: false } });
+Size.hasMany(Order, { foreignKey: { allowNull: false } });
 
 Order.belongsTo(Tab);
 Order.belongsTo(Size);
 
 function syncModel() {
-  Point.sync({ force: true });
-  Category.sync({ force: true });
-  Product.sync({ force: true });
+  //Point.sync({ force: true });
+  //Category.sync({ force: true });
+  // Product.sync({ force: true });
+  //Table.sync({ force: true });
   Size.sync({ force: true });
-  Table.sync({ force: true });
   Tab.sync({ force: true });
   Order.sync({ force: true });
 }
