@@ -29,6 +29,9 @@ Size.belongsToMany(
   { foreignKey: { allowNull: false } }
 );
 
+Order.belongsTo(Tab);
+Order.belongsTo(Size);
+
 function syncModel() {
   Point.sync({ force: true });
   Category.sync({ force: true });

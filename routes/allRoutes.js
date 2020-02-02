@@ -4,6 +4,7 @@ const productRouter = require("./productRouter");
 const sizeRouter = require("./sizeRouter");
 const tableRouter = require("./tableRouter");
 const tabRouter = require("./tabRouter");
+const orderRouter = require("./orderRouter");
 
 const allroutes = [
   pointRouter,
@@ -11,7 +12,8 @@ const allroutes = [
   productRouter,
   sizeRouter,
   tableRouter,
-  tabRouter
+  tabRouter,
+  orderRouter
 ];
 
 module.exports = allroutes;
