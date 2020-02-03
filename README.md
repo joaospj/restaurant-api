@@ -6,89 +6,92 @@
 
 ```localhost:3000/api/categorias```
 
-POST category
+## POST category
 
 ```localhost:3000/api/categoria```
 
-Headers
+```Headers
 Content-Type	application/json
 Bodyraw (application/json)
 {
 	"name":"Massas",
 	"PointId": 1
 }
+```
 
-GET category by id
-
-```localhost:3000/api/categoria/:id```
-
-DELETE category by id
+## GET category by id
 
 ```localhost:3000/api/categoria/:id```
 
-Ponto
+## DELETE category by id
 
-GET all points
+```localhost:3000/api/categoria/:id```
+
+# Ponto
+
+## GET all points
 
 ```localhost:3000/api/pontos```
 
-POST point
+## POST point
 
 ```localhost:3000/api/ponto```
 
-Headers
+```Headers
 Content-Type	application/json
 Bodyraw (application/json)
 {
 	"name":"Teste"
 	
 }
+```
 
-GET point by id
-
-```localhost:3000/api/ponto/:id```
-
-DELETE point by id
+## GET point by id
 
 ```localhost:3000/api/ponto/:id```
 
-Comanda
+## DELETE point by id
 
-GET all tabs
+```localhost:3000/api/ponto/:id```
+
+# Comanda
+
+## GET all tabs
 
 ```localhost:3000/api/comandas```
 
-POST tab
+## POST tab
 
 ```localhost:3000/api/comanda```
 
-Headers
+```Headers
 Content-Type	application/json
 Bodyraw (application/json)
 {
 	"TableId":1
 	
 }
+```
 
-GET point by id
-
-```localhost:3000/api/comanda/:id```
-
-DELETE point by id
+## GET point by id
 
 ```localhost:3000/api/comanda/:id```
 
-Pedido
+## DELETE point by id
 
-GET all orders
+```localhost:3000/api/comanda/:id```
+
+# Pedido
+
+## GET all orders
 
 ```localhost:3000/api/pedidos```
 
-POST order
+## POST order
 
 ```localhost:3000/api/pedido```
 
-Headers
+```Headers
 Content-Type	application/json
 Bodyraw (application/json)
 {
@@ -96,26 +99,27 @@ Bodyraw (application/json)
 	"SizeId":1
 	
 }
+```
 
-GET order by id
-
-```localhost:3000/api/pedido/:id```
-
-DELETE order by id
+## GET order by id
 
 ```localhost:3000/api/pedido/:id```
 
-Tamanho
+## DELETE order by id
 
-GET all sizes
+```localhost:3000/api/pedido/:id```
+
+# Tamanho
+
+## GET all sizes
 
 ```localhost:3000/api/tamanhos```
 
-POST size
+## POST size
 
 ```localhost:3000/api/tamanho```
 
-Headers
+```Headers
 Content-Type	application/json
 Bodyraw (application/json)
 {
@@ -125,26 +129,27 @@ Bodyraw (application/json)
 	"default":true
 	
 }
+```
 
-GET size by id
-
-```localhost:3000/api/tamanho/:id```
-
-DELETE size by id
+## GET size by id
 
 ```localhost:3000/api/tamanho/:id```
 
-Mesa
+## DELETE size by id
 
-GET all tables
+```localhost:3000/api/tamanho/:id```
+
+# Mesa
+
+## GET all tables
 
 ```localhost:3000/api/mesas```
 
-POST table
+## POST table
 
 ```localhost:3000/api/mesa```
 
-Headers
+```Headers
 Content-Type	application/json
 Bodyraw (application/json)
 {
@@ -153,22 +158,23 @@ Bodyraw (application/json)
 	"isActive":true
 	
 }
+```
 
-GET table by id
-
-```localhost:3000/api/mesa/:id```
-
-DELETE table by id
+## GET table by id
 
 ```localhost:3000/api/mesa/:id```
 
-Produto
+## DELETE table by id
 
-POST product
+```localhost:3000/api/mesa/:id```
+
+# Produto
+
+## POST product
 
 ```localhost:3000/api/produto```
 
-Headers
+```Headers
 Content-Type	application/json
 Bodyraw (application/json)
 {
@@ -177,15 +183,16 @@ Bodyraw (application/json)
 	"inStock": "true"
 	
 }
+```
 
-GET all products
+## GET all products
 
 ```localhost:3000/api/produtos```
 
-DELETE product by id
+## DELETE product by id
 
 ```localhost:3000/api/produto/:id```
 
-GET product by id
+## GET product by id
 
 ```localhost:3000/api/produto/:id```
