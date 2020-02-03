@@ -29,9 +29,8 @@ exports.getPoint = function(req, res) {
 //Add Point
 
 exports.addPoint = function(req, res) {
-  Point.create({
-    name: req.body.name
-  })
+  const { name } = req.body;
+  Point.create({ name })
     .then(resp => {
       res.send(resp);
     })

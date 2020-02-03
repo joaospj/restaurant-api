@@ -30,15 +30,25 @@ exports.getProduct = function(req, res) {
 //Add Product
 
 exports.addProduct = function(req, res) {
+  const {
+    name,
+    CategoryId,
+    inStock,
+    description,
+    unitMeasure,
+    img1Url,
+    img2Url,
+    img3Url
+  } = req.body;
   Product.create({
-    name: req.body.name,
-    CategoryId: req.body.CategoryId,
-    inStock: req.body.inStock,
-    description: req.body.description,
-    unitMeasure: req.body.unitMeasure,
-    img1Url: req.body.img1Url,
-    img2Url: req.body.img2Url,
-    img3Url: req.body.img3Url
+    name,
+    CategoryId,
+    inStock,
+    description,
+    unitMeasure,
+    img1Url,
+    img2Url,
+    img3Url
   })
     .then(resp => {
       res.send(resp);

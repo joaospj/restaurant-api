@@ -30,6 +30,7 @@ exports.getSize = function(req, res) {
 //Add Size
 
 exports.addSize = function(req, res) {
+  //const { name, price, default, ProductId } = req.body; Alterar default do banco
   Size.create({
     name: req.body.name,
     price: req.body.price,

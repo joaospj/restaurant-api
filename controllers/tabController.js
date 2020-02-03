@@ -30,9 +30,8 @@ exports.getTab = function(req, res) {
 //Add Tab
 
 exports.addTab = function(req, res) {
-  Tab.create({
-    TableId: req.body.TableId
-  })
+  const { TableId } = req.body;
+  Tab.create({ TableId })
     .then(resp => {
       res.send(resp);
     })

@@ -31,10 +31,8 @@ exports.getOrder = function(req, res) {
 //Add Order
 
 exports.addOrder = function(req, res) {
-  Order.create({
-    TabId: req.body.TabId,
-    SizeId: req.body.SizeId
-  })
+  const { TabId, SizeId } = req.body;
+  Order.create({ TabId, SizeId })
     .then(resp => {
       res.send(resp);
     })

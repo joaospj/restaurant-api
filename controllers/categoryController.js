@@ -30,12 +30,8 @@ exports.getCategory = function(req, res) {
 //Add Category
 
 exports.addCategory = function(req, res) {
-  Category.create({
-    name: req.body.name,
-    PointId: req.body.PointId,
-    idParent: req.body.idParent,
-    iconUrl: req.body.iconUrl
-  })
+  const { name, PointId, idParent, iconUrl } = req.body;
+  Category.create({ name, PointId, idParent, iconUrl })
     .then(resp => {
       res.send(resp);
     })

@@ -29,12 +29,8 @@ exports.getTable = function(req, res) {
 //Add Table
 
 exports.addTable = function(req, res) {
-  Table.create({
-    name: req.body.name,
-    imgUrl: req.body.imgUrl,
-    status: req.body.status,
-    isActive: req.body.isActive
-  })
+  const { name, imgUrl, status, isActive } = req.body;
+  Table.create({ name, imgUrl, status, isActive })
     .then(resp => {
       res.send(resp);
     })
